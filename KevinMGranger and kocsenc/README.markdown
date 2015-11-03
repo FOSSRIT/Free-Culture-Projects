@@ -2,7 +2,7 @@
 
 Note: Because I am unsure of the viablility of the first idea, I may pursue the alternate one mentioned here.o
 
-Note: I may partner up with someone for this.
+Note: I am partnering with @kocsenc for this
 
 ## Digital Refugees
 
