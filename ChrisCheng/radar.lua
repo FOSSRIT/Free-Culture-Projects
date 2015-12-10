@@ -71,7 +71,7 @@ while true do
   end
 
   if(not serverGivesLocs) then
-    -- Uses code from https://github.com/gheja/trilateration.js/blob/master/trilateration.js
+    -- Modified code from https://github.com/gheja/trilateration.js/blob/master/trilateration.js
   
     local function sq(num)
       return num * num
@@ -115,6 +115,7 @@ while true do
           table.insert(dists, dist)
         end
         
+        -- More of ghela's code
         ex = vecdiv(vecsub(rdrs[2], rdrs[1]), mag(vecsub(rdrs[2], rdrs[1])))
         i = vecdot(ex, vecsub(rdrs[3], rdrs[1]))
         a = vecsub(vecsub(rdrs[3], rdrs[1]), vecmul(ex, i))
@@ -141,6 +142,8 @@ while true do
         a = vecadd(rdrs[1], vecadd(vecmul(ex, x), vecmul(ey, y)))
         p4a = vecadd(a, vecmul(ez, z))
         p4b = vecsub(a, vecmul(ez, z))
+        
+        -- End ghela's code
         
         if(z == 0) then -- One solution, assign to player
           plyr.x = a.x
